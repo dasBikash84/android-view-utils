@@ -53,21 +53,8 @@ object PopUpMenuUtils {
     }
 }
 
-fun View.attachPopUpMenuForLongClick(popUpMenuItems: Collection<PopUpMenuItem>, doOnMenuLaunch:(()->Unit)={}){
-    setOnLongClickListener {
-        PopUpMenuUtils.launchPopUpMenu(
-            it.context,
-            popUpMenuItems,
-            doOnMenuLaunch
-        )
-    }
-}
-fun View.attachPopUpMenuForClick(popUpMenuItems: Collection<PopUpMenuItem>, doOnMenuLaunch:(()->Unit)={}){
-    setOnClickListener {
-        PopUpMenuUtils.launchPopUpMenu(
-            it.context,
-            popUpMenuItems,
-            doOnMenuLaunch
-        )
-    }
-}
+fun View.attachPopUpMenuForLongClick(popUpMenuItems: Collection<PopUpMenuItem>, doOnMenuLaunch:(()->Unit)={})
+    = PopUpMenuUtils.attachPopUpMenuForLongClick(this,popUpMenuItems, doOnMenuLaunch)
+
+fun View.attachPopUpMenuForClick(popUpMenuItems: Collection<PopUpMenuItem>, doOnMenuLaunch:(()->Unit)={})
+    = PopUpMenuUtils.attachPopUpMenuForClick(this,popUpMenuItems, doOnMenuLaunch)
