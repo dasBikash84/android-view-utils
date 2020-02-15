@@ -9,7 +9,7 @@ internal class PopUpMenuItemHolder(itemView: View):RecyclerView.ViewHolder(itemV
 
     private val mMenuItemText:AppCompatTextView = itemView.findViewById(R.id.menu_item_text)
     private val mSeparator:View = itemView.findViewById(R.id.seperator)
-    
+
     fun bind(popUpMenuItem: PopUpMenuItem?, position: Int, itemCount: Int) {
         popUpMenuItem?.apply {
             mMenuItemText.text = text
