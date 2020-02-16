@@ -4,7 +4,7 @@ import android.animation.ObjectAnimator
 import android.view.View
 
 internal object ClickUtils {
-    private const val DIMMING_DURATION = 100L
+    const val DIMMING_DURATION = 100L
 
     fun getClickListnerWithDimming(l: View.OnClickListener?): View.OnClickListener {
         return object : View.OnClickListener {

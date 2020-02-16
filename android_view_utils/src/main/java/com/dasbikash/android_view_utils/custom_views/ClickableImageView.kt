@@ -4,6 +4,13 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.ImageView
 
+/**
+ * Custom view class wrapping <b>ImageView</b>.
+ * If click listener attached then this view will display
+ * a blink animation on click.
+ *
+ * @author Bikash Das(das.bikash.dev@gmail.com)
+ * */
 class ClickableImageView:ImageView{
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)

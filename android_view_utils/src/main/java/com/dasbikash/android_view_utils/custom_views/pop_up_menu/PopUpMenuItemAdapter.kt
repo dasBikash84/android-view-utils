@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.ListAdapter
 import com.dasbikash.android_view_utils.R
+import com.dasbikash.android_view_utils.custom_views.ClickUtils
 import com.dasbikash.android_view_utils.utils.runOnMainThread
 
 internal class PopUpMenuItemAdapter(val alertDialog: AlertDialog):ListAdapter<PopUpMenuItem, PopUpMenuItemHolder>(
@@ -20,11 +21,11 @@ internal class PopUpMenuItemAdapter(val alertDialog: AlertDialog):ListAdapter<Po
     }
     override fun onBindViewHolder(holder: PopUpMenuItemHolder, position: Int) {
         val menuItem = getItem(position)
-        holder.itemView.setOnClickListener {
+        holder.mMenuItemText.setOnClickListener {
             runOnMainThread({
                 alertDialog.hide()
                 menuItem.task()
-            })
+            },ClickUtils.DIMMING_DURATION)
         }
         holder.bind(getItem(position),position,itemCount)
     }

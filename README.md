@@ -1,6 +1,6 @@
 # android-view-utils
 
-<h3>Library containting utility classes and kotlin extensions for most common view controler related android tasks.</h3>
+<h3>Library containing utility classes and kotlin extensions for most common view controler related android tasks.</h3>
 
 
 
