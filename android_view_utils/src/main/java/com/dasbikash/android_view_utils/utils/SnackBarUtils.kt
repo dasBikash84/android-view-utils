@@ -18,7 +18,7 @@ import com.google.android.material.snackbar.Snackbar
  * */
 object SnackBarUtils {
 
-    internal val DEFAULT_ACTION_TEXT_COLOR = Color.BLUE
+    internal val DEFAULT_ACTION_TEXT_COLOR = Color.MAGENTA
     internal val DEFAULT_ACTION_TEXT_CASE_IS_UPPER = false
 
     fun showShortSnack(
