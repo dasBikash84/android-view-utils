@@ -15,6 +15,8 @@ package com.dasbikash.android_view_utils.utils
 
 import android.content.Context
 import android.content.DialogInterface
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 
@@ -77,4 +79,8 @@ internal object DialogUtils {
         val view:View? = null
     )
 
+}
+
+internal fun runOnMainThread(task: () -> Any?, delayMs: Long = 0L) {
+    Handler(Looper.getMainLooper()).postDelayed({ task() }, delayMs)
 }
